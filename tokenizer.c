@@ -137,7 +137,7 @@ char *validate_input(char **arguments, char **argv __attribute__((unused)))
 			i++;
 		}
 		free(tokens_path);
-		fprintf(stderr, "%s: not found\n", arguments[0]);
+		fprintf(stderr, "%s: 1: %s: not found\n", argv[0], arguments[0]);
 		return ("Fail access");
 	}
 	return (new_arguments);
