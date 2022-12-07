@@ -137,8 +137,8 @@ char *validate_input(char **arguments, char **argv __attribute__((unused)))
 			i++;
 		}
 		free(tokens_path);
-		fprintf(stderr, "%s: No such file or directory\n", arguments[0]);
-		return ("Fail access");
+		fprintf(stderr, "%s: not found\n", arguments[0]);
+		exit(127);
 	}
 	return (new_arguments);
 }
