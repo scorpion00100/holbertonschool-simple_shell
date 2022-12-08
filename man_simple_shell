@@ -1,0 +1,126 @@
+.\" Manpage simple_shell
+
+.TH simple_shell "06-12-22" "simple_shell"
+
+.SH NAME
+
+\fBsimple_shell\fR - Simulates a Simple UNIX shell to handle multiple commands
+
+.SH SYNOPSIS
+
+\fB./dav_shell##\fR [OPTIONS] [COMMAND_STRING | file]
+Holberton School
+
+.SH DESCRIPTION
+
+This program simulates a command interpreter based in Unix and LINUX with it is basic commands.
+through a terminal emulator and some executable instructions(shell scripts) the user can interact with this \fBsimple_shell.\fR
+This simple_shell is not supossed to be an exact imitation of the original Unix Shell. This doesn't cover all of the instructions the original does.
+
+.SH INVOCATION
+
+The prompt 'dav_shell->$ ' will appear on terminal. You could enter commands following the prompt. You can't handle multiple commands using ';' '&&' '||' specifiers. Once you have entered the commands you execute the commands finishing by pressing 'ENTER' key.
+
+.SH FEATURES
+
+* This program displays a prompt and wait for the user to type a command. A command line always ends with a new line (when user push ENTER key).
+
+* The prompt is displayed again each time a command has been executed.
+
+* When the user enters exit, Hell shell will end and returns the status 0.
+
+* When the user enters exit [status], Hell Shell will end and return the inputed status.
+
+* The user could stop the program using Ctrl+D (end of file).
+
+* The shell handles command lines with arguments and pathways.
+
+* The program prints the current enviroment when the user types env.
+
+* This program executes the most common shell commands as ls, pwd, rm, cp, mv, exit, env, etc... with arguments.
+
+* If an executable cannot be found, It prints an error message such as "not found" and display the prompt again.
+
+* The Hell Shell does NOT support wildcard characters such as ls *.dat in parameters (or commands). 
+
+* This shell does NOT support pipes |, shell logical operators as && or ||, neither commands separator ;.
+
+
+.SH EXAMPLES_COMMANDS
+
+Note it is respective output.
+.br
+.\&
+.RS
+.TP
+.TP
+
+\fBls [OPTIONS..] - lists the the files and directories in the current directory
+
+.TP
+.LP
+dav_shell->$ ls
+.LP
+.TP
+.LP
+environ.c  README.md	executor.c  func_help.c  man_simple_shell  main.h  shell.c  tokenizer.c
+.LP
+.TP
+.br
+
+\fBecho [OPTIONS..] string.. - displays a line of text
+
+.TP
+.LP
+dav_shell->$ echo Dan Amandine and valentin top group
+.LP
+.TP
+.LP
+Dan Amandine and valentin top group
+.LP
+.TP
+
+\fBpwd [OPTIONS..] - Prints the working directory
+
+.TP
+.br
+.LP
+dav_shell->$ pwd
+.LP
+.TP
+.LP
+/home/dan001/Bureau/beta_test
+.LP
+.TP
+.br
+
+\fBCtrl + D\FR - quits the program
+
+.TP
+.LP
+dav_shell->$ ^D
+.LP
+.TP
+.LP
+dan001@dan001-Legion-5-15ACH6A:~/Bureau/beta_test$
+.LP
+.br
+
+.TP
+\fBexit\FR - exits the shell
+.TP
+.LP
+dav_Shell->$ exit
+.LP
+.TP
+.LP
+dan001@dan001-Legion-5-15ACH6A:~/Bureau/beta_test$
+
+.SH AUTHOR(S)
+
+Dan Bethel IRYIVUZE.
+Amandine ASSENAT.
+Valentin MELIA.
+
+.SH COPYRIGHT
+Copyright © 2022 Holberton School Toulouse.
